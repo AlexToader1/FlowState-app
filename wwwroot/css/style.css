@@ -1,0 +1,220 @@
+/* RESET ȘI VARIABILE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg-main: #0f0f13;
+    --bg-glass: rgba(30, 30, 35, 0.65);
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --text-main: #e0e0e0;
+    --text-muted: #858585;
+    --accent: #6c5ce7;
+    --accent-hover: #8073ea;
+    --success: #00b894;
+}
+
+body {
+    background: radial-gradient(circle at top left, #1a1a24, var(--bg-main));
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* LAYOUT PRINCIPAL */
+.app-container {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 30px); /* Lăsăm loc pentru status bar */
+}
+
+/* SIDEBAR - Efect Frosted Glass */
+.sidebar {
+    width: 60px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid var(--border-glass);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo i {
+    font-size: 24px;
+    color: var(--accent);
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+}
+
+.nav-links { list-style: none; width: 100%; }
+.nav-links li {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-links li:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.nav-links li.active {
+    color: var(--accent);
+    border-left: 3px solid var(--accent);
+    background: rgba(108, 92, 231, 0.1);
+}
+
+.nav-links li i { font-size: 20px; }
+
+/* WORKSPACE */
+.workspace {
+    flex: 1;
+    position: relative;
+    background: transparent;
+}
+
+/* VIEWS (Paginile interne) */
+.view {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.view.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.view-header {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.view-content {
+    flex: 1;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-text {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* COMPONENTE UI */
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover { background: var(--accent-hover); }
+
+.editor-box {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+    display: none; /* Ascuns până alegem folderul */
+}
+
+/* STATUS BAR */
+.statusbar {
+    height: 30px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-glass);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.status-indicator.online {
+    background-color: var(--success);
+    box-shadow: 0 0 8px var(--success);
+}
+
+.mirror-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    height: 100%;
+}
+
+.file-list {
+    width: 220px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-glass);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-list-header {
+    padding: 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-glass);
+}
+
+#trackedFiles {
+    list-style: none;
+    overflow-y: auto;
+    flex: 1;
+}
+
+#trackedFiles li {
+    padding: 10px 15px;
+    font-size: 13px;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    color: var(--text-muted);
+    transition: all 0.2s;
+    word-break: break-all;
+}
+
+#trackedFiles li:hover { background: rgba(255, 255, 255, 0.05); }
+
+#trackedFiles li.active {
+    color: var(--text-main);
+    border-left: 3px solid var(--accent);
+    background: rgba(108, 92, 231, 0.1);
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlowState</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome pentru iconițe (din CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Monaco Editor Loader -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <ul class="nav-links">
+                <!-- Data-target indică ID-ul view-ului pe care îl deschide -->
+                <li class="active" data-target="view-mirror" title="Code Mirror">
+                    <i class="fa-solid fa-code"></i>
+                </li>
+                <li data-target="view-planner" title="AI Planner">
+                    <i class="fa-solid fa-brain"></i>
+                </li>
+                <li data-target="view-profiler" title="Runtime Profiler">
+                    <i class="fa-solid fa-chart-line"></i>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- WORKSPACE (ZONA CENTRALĂ) -->
+        <main class="workspace">
+            
+            <!-- VIEW 1: CODE MIRROR (Modulul pe care îl avem deja) -->
+            <section id="view-mirror" class="view active">
+                <header class="view-header">
+                    <h2>Code Mirror</h2>
+                    <button id="selectFolderBtn" class="btn-primary">
+                        <i class="fa-regular fa-folder-open"></i> Deschide Proiect
+                    </button>
+                </header>
+                <div class="view-content mirror-layout">
+    <!-- Lista de fișiere (ascunsă inițial) -->
+    <div class="file-list" id="fileList" style="display: none;">
+        <div class="file-list-header">Fișiere Modificate</div>
+        <ul id="trackedFiles"></ul>
+    </div>
+    
+    <!-- Editorul -->
+    <div id="editorContainer" class="editor-box"></div>
+</div>
+            </section>
+
+            <!-- VIEW 2: AI PLANNER (Pentru viitor) -->
+            <section id="view-planner" class="view">
+                <header class="view-header">
+                    <h2>AI Architect</h2>
+                </header>
+                <div class="view-content flex-center">
+                    <p class="placeholder-text">Aici vom pune chat-ul cu AI-ul și arborele de arhitectură.</p>
+                </div>
+            </section>
+
+            <!-- VIEW 3: PROFILER (Pentru viitor) -->
+            <section id="view-profiler" class="view">
+                <header class="view-header">
+                    <h2>System Profiler (Live)</h2>
+                </header>
+                <div class="view-content">
+                    <!-- Canvas-ul pe care Chart.js va desena graficul -->
+                    <div
+                        style="flex: 1; background: rgba(0,0,0,0.2); border: 1px solid var(--border-glass); border-radius: 8px; padding: 15px;">
+                        <canvas id="cpuChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- STATUS BAR (JOS) -->
+    <footer class="statusbar">
+        <div class="status-left">
+            <i class="fa-solid fa-eye"></i> <span id="folderPath">Niciun folder urmărit</span>
+        </div>
+        <div class="status-right">
+            <span class="status-indicator online"></span> FlowState Core Active
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
