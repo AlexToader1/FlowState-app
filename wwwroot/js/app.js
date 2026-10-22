@@ -116,4 +116,53 @@ window.chrome.webview.addEventListener('message', event => {
             cpuChart.update();
         }
     }
+    else if (data.type === "AI_RESPONSE") {
+        // Distrugem bula temporară de loading dacă există
+        const loader = document.getElementById('ai-loading');
+        if (loader) loader.remove();
+        
+        appendMessage("Ollama", data.text, false);
+    }
 });
+
+// --- LOGICA AI ARCHITECT ---
+const aiInput = document.getElementById('aiInput');
+const sendAiBtn = document.getElementById('sendAiBtn');
+const chatHistory = document.getElementById('chatHistory');
+
+function appendMessage(sender, text, isUser = false) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `chat-msg ${isUser ? 'user-msg' : 'ai-msg'}`;
+    msgDiv.innerHTML = `<strong>${sender}:</strong><br/>${text}`;
+    chatHistory.appendChild(msgDiv);
+    chatHistory.scrollTop = chatHistory.scrollHeight; // Auto-scroll la ultimul mesaj
+}
+
+function sendToOllama() {
+    const text = aiInput.value.trim();
+    if (!text) return;
+
+    appendMessage("Tu", text, true);
+    aiInput.value = '';
+
+    // Inserăm indicatorul de încărcare vizual
+    const loadingDiv = document.createElement('div');
+    loadingDiv.id = 'ai-loading';
+    loadingDiv.className = 'chat-msg ai-msg';
+    loadingDiv.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Ollama scrie...';
+    chatHistory.appendChild(loadingDiv);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+
+    const currentCode = activeFile ? openFiles[activeFile] : "";
+    window.chrome.webview.postMessage(JSON.stringify({
+        type: "ASK_AI",
+        prompt: text,
+        context: currentCode
+    }));
+}
+
+sendAiBtn.addEventListener('click', sendToOllama);
+aiInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendToOllama();
+});
+

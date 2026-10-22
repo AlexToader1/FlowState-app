@@ -218,3 +218,28 @@ body {
     border-left: 3px solid var(--accent);
     background: rgba(108, 92, 231, 0.1);
 }
+
+/* Stiluri pentru Chat AI */
+.chat-msg {
+    padding: 12px 16px;
+    border-radius: 8px;
+    max-width: 85%;
+    line-height: 1.4;
+    font-size: 14px;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Păstrează formatarea codului generat de AI */
+}
+
+.ai-msg {
+    background: rgba(108, 92, 231, 0.15);
+    border: 1px solid rgba(108, 92, 231, 0.3);
+    align-self: flex-start;
+    color: var(--text-main);
+}
+
+.user-msg {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    align-self: flex-end;
+    color: var(--text-main);
+}

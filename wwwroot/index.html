@@ -57,10 +57,26 @@
             <!-- VIEW 2: AI PLANNER (Pentru viitor) -->
             <section id="view-planner" class="view">
                 <header class="view-header">
-                    <h2>AI Architect</h2>
+                    <h2>AI Architect (Ollama Local)</h2>
                 </header>
-                <div class="view-content flex-center">
-                    <p class="placeholder-text">Aici vom pune chat-ul cu AI-ul și arborele de arhitectură.</p>
+                <div class="view-content" style="padding: 0; display: flex; flex-direction: column;">
+                    <!-- Fereastra de chat unde apar mesajele -->
+                    <div id="chatHistory"
+                        style="flex: 1 1 0; min-height: 0; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px;">
+                        <div class="chat-msg ai-msg">
+                            <strong>FlowState AI:</strong> Salut! Selectează un fișier în Code Mirror și întreabă-mă orice despre el.
+                        </div>
+                    </div>
+            
+                    <!-- Zona de input -->
+                    <div
+                        style="padding: 15px; border-top: 1px solid var(--border-glass); background: rgba(0,0,0,0.2); display: flex; gap: 10px;">
+                        <input type="text" id="aiInput" placeholder="Ex: Refactorizează această funcție pentru a fi asincronă..."
+                            style="flex: 1; padding: 10px; border-radius: 6px; border: 1px solid var(--border-glass); background: #1e1e24; color: white; outline: none;">
+                        <button id="sendAiBtn" class="btn-primary" style="padding: 0 20px;">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
                 </div>
             </section>
 
