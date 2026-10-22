@@ -1,37 +1,37 @@
 <div align="center">
-  <!-- GitHub va afișa iconița ta aici dacă o pui în repository -->
+  <!-- GitHub will display your icon here if you include it in the repository -->
   <img src="app.ico" alt="FlowState Logo" width="120">
   
   <h1>⚡ FlowState</h1>
-  <p><b>Un companion desktop offline-first pentru dezvoltatori, modular și ultra-rapid.</b></p>
+  <p><b>An offline-first, modular, and ultra-fast desktop developer companion.</b></p>
 </div>
 
 ---
 
-## 🚀 Despre Proiect
-FlowState este un dashboard utilitar construit pe o arhitectură hibridă (C# .NET WPF în spate, tehnologii Web în față). Este gândit să ruleze silențios ca un utilitar de sistem, oferind vizualizare de cod în timp real, monitorizare de performanță hardware și, în viitorul apropiat, asistență AI complet izolată. Totul fără conturi, login-uri sau baze de date.
+## 🚀 About The Project
+FlowState is a utility dashboard built on a hybrid architecture (C# .NET WPF backend, Web technologies frontend). It is designed to run silently as a system utility, offering real-time code visualization, hardware performance monitoring, and, in the near future, fully isolated AI assistance. All without accounts, logins, or databases.
 
-## ✨ Funcționalități Principale
+## ✨ Core Features
 
 *   **🔍 Code Mirror (Live File Tracker)**
-    Selectezi folderul proiectului la care lucrezi, iar FlowState folosește `FileSystemWatcher` pentru a intercepta orice fișier salvat. Codul este randat instantaneu folosind motorul din spate de la VS Code (**Monaco Editor**). Include un sistem de tab-uri laterale pentru comutarea rapidă între fișierele modificate.
+    Select your working project folder, and FlowState uses `FileSystemWatcher` to intercept any saved file. The code is rendered instantly using the VS Code backend engine (**Monaco Editor**). Includes a sidebar tab system for quick switching between modified files.
 *   **📈 System Profiler (Live Telemetry)**
-    Extrage date din senzorii nativi de Windows (`PerformanceCounter`) și randează telemetria hardware direct în frontend. Graficele live urmăresc fluctuațiile de CPU în timp real cu zero lag.
-*   **🧠 AI Architect (În dezvoltare)**
-    Un asistent contextual integrat. Va citi automat fișierul selectat curent în *Code Mirror* și va genera arhitectură, refactorizări sau explicații rulând un model de inteligență artificială **100% offline** (via Ollama).
+    Extracts data from native Windows sensors (`PerformanceCounter`) and renders hardware telemetry directly in the frontend. Live charts track CPU fluctuations in real-time with zero lag.
+*   **🧠 AI Architect (In Development)**
+    An integrated contextual assistant. It will automatically read the currently selected file in the *Code Mirror* and generate architecture, refactorings, or explanations by running a **100% offline** AI model (via Ollama).
 
-## 🛠️ Arhitectură și Tech Stack
-Aplicația comunică printr-un bridge asincron bidirecțional (`PostWebMessageAsJson`), unde C#-ul acționează ca un server local de resurse, iar JavaScript-ul randează interfața grafică modernă.
+## 🛠️ Architecture & Tech Stack
+The application communicates via a bidirectional asynchronous bridge (`PostWebMessageAsJson`), where C# acts as a local resource server, and JavaScript renders the modern graphical interface.
 
 *   **Backend:** C# / .NET 8 / WPF
-*   **Motor Randare:** Microsoft Edge WebView2 (Evergreen mode)
+*   **Rendering Engine:** Microsoft Edge WebView2 (Evergreen mode)
 *   **Frontend UI:** HTML5, CSS3 (Custom Dark & Frosted Glass Theme), Vanilla JS
-*   **Module Externe (via CDN):** Monaco Editor, Chart.js, FontAwesome
+*   **External Modules (via CDN):** Monaco Editor, Chart.js, FontAwesome
 
-## ⚙️ Instalare și Rulare
-Asigură-te că ai instalat [.NET 8 SDK](https://dotnet.microsoft.com/) pe mașina ta Windows.
+## ⚙️ Installation & Usage
+Make sure you have the [.NET 8 SDK](https://dotnet.microsoft.com/) installed on your Windows machine.
 
-1. Clonează repository-ul local:
+1. Clone the local repository:
    ```bash
-   git clone [https://github.com/user-ul-tau/FlowState.git](https://github.com/user-ul-tau/FlowState.git)
+   git clone [https://github.com/your-username/FlowState.git](https://github.com/your-username/FlowState.git)
    cd FlowState
