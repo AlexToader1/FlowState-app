@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4d164C2Lmbk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alex0\\Desktop\\DA\\FlowState-app\\FlowState.Desktop\\FlowState.Desktop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alex0\\.nuget\\packages\\microsoft.web.webview2\\1.0.4314.35\\microsoft.web.webview2.1.0.4314.35.nupkg.sha512"
+  ],
+  "logs": []
+}

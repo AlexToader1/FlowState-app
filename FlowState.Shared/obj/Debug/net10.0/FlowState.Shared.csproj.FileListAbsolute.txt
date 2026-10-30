@@ -1,0 +1,11 @@
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\bin\Debug\net10.0\FlowState.Shared.deps.json
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\bin\Debug\net10.0\FlowState.Shared.dll
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\bin\Debug\net10.0\FlowState.Shared.pdb
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\obj\Debug\net10.0\FlowState.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\obj\Debug\net10.0\FlowState.Shared.AssemblyInfoInputs.cache
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\obj\Debug\net10.0\FlowState.Shared.AssemblyInfo.cs
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\obj\Debug\net10.0\FlowState.Shared.csproj.CoreCompileInputs.cache
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\obj\Debug\net10.0\FlowState.Shared.dll
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\obj\Debug\net10.0\refint\FlowState.Shared.dll
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\obj\Debug\net10.0\FlowState.Shared.pdb
+C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Shared\obj\Debug\net10.0\ref\FlowState.Shared.dll

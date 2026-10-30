@@ -1,0 +1,29 @@
+2026-10-29 23:39:20.984: [INFO] CurrentProfilePath: C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default
+2026-10-29 23:39:20.984: [INFO] Profiles total count: 1
+2026-10-29 23:39:20.984: [INFO] Profile: name=Profile 1 path=C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default lastActive=null
+2026-10-29 23:39:20.984: [INFO] LastUsedProfileDir: C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default
+2026-10-29 23:39:20.984: [INFO] OnDoneLoading sync enabled: 0
+2026-10-29 23:39:20.984: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-29 23:39:20.984: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-29 23:39:20.984: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-29 23:39:33.879: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-29 23:56:50.384: [INFO] CurrentProfilePath: C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default
+2026-10-29 23:56:50.384: [INFO] Profiles total count: 1
+2026-10-29 23:56:50.384: [INFO] Profile: name=Profile 1 path=C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default lastActive=2026-10-29T23:39:33.776Z
+2026-10-29 23:56:50.384: [INFO] LastUsedProfileDir: C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default
+2026-10-29 23:56:50.384: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default lastActive=2026-10-29T23:39:33.776Z
+2026-10-29 23:56:50.384: [INFO] OnDoneLoading sync enabled: 0
+2026-10-29 23:56:50.384: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-29 23:56:50.384: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-29 23:56:50.384: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-29 23:59:04.424: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-30 00:01:37.098: [INFO] CurrentProfilePath: C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default
+2026-10-30 00:01:37.098: [INFO] Profiles total count: 1
+2026-10-30 00:01:37.098: [INFO] Profile: name=Profile 1 path=C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default lastActive=2026-10-29T23:59:04.367Z
+2026-10-30 00:01:37.098: [INFO] LastUsedProfileDir: C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default
+2026-10-30 00:01:37.098: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\alex0\Desktop\DA\FlowState-app\FlowState.Desktop\bin\Debug\net10.0-windows\FlowState.Desktop.exe.WebView2\EBWebView\Default lastActive=2026-10-29T23:59:04.367Z
+2026-10-30 00:01:37.098: [INFO] OnDoneLoading sync enabled: 0
+2026-10-30 00:01:37.098: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-30 00:01:37.098: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-30 00:01:37.098: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-30 00:03:20.581: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

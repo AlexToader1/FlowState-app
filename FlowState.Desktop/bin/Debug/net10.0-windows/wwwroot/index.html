@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowState</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #121212, #1e1e1e);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 40px;
+            width: 320px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        h2 { margin-bottom: 20px; font-weight: 500; letter-spacing: 1px; }
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            outline: none;
+        }
+        input:focus { border-color: #007acc; }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 6px;
+            border: none;
+            background: #007acc;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        button:hover { background: #005999; }
+        .switch-text {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #aaa;
+            cursor: pointer;
+        }
+        .switch-text:hover { color: #fff; text-decoration: underline; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="glass-panel">
+        <h2 id="form-title">Login</h2>
+        
+        <div id="username-field" class="hidden">
+            <input type="text" id="username" placeholder="Username" autocomplete="off" />
+        </div>
+        <input type="email" id="email" placeholder="Email" autocomplete="off" />
+        <input type="password" id="password" placeholder="Password" />
+        
+        <button id="submit-btn" onclick="handleSubmit()">Login</button>
+        
+        <div class="switch-text" id="switch-btn" onclick="toggleMode()">Nu ai cont? Înregistrează-te</div>
+    </div>
+
+    <script>
+        let isLoginMode = true;
+
+        function toggleMode() {
+            isLoginMode = !isLoginMode;
+            document.getElementById('form-title').innerText = isLoginMode ? 'Login' : 'Sign Up';
+            document.getElementById('submit-btn').innerText = isLoginMode ? 'Login' : 'Register';
+            document.getElementById('switch-btn').innerText = isLoginMode ? 'Nu ai cont? Înregistrează-te' : 'Ai deja cont? Autentifică-te';
+            
+            const usernameField = document.getElementById('username-field');
+            if (isLoginMode) {
+                usernameField.classList.add('hidden');
+            } else {
+                usernameField.classList.remove('hidden');
+            }
+        }
+
+        function handleSubmit() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const username = document.getElementById('username').value;
+
+            const action = isLoginMode ? 'login' : 'register';
+
+            window.chrome.webview.postMessage(JSON.stringify({
+                action: action,
+                email: email,
+                password: password,
+                username: username
+            }));
+        }
+    </script>
+</body>
+</html>

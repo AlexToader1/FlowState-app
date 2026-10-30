@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="FlowState.API/FlowState.API.csproj" />
+  <Project Path="FlowState.Desktop/FlowState.Desktop.csproj" />
+  <Project Path="FlowState.Shared/FlowState.Shared.csproj" />
+</Solution>
